@@ -1,11 +1,23 @@
-var randomNumber1 = Math.round(Math.random()*6);
-var randomNumber2 = Math.round(Math.random()*6);
+//Dado n1
+var randomNumber1 = Math.floor(Math.random()*6) + 1;
 
-var dado1 = "images/dado" + randomNumber1 + ".png"
-var dado2 = "images/dado" + randomNumber2 + ".png"
+var randomDadoImagen = "dado" + randomNumber1 + ".png"
 
-document.querySelector(".dado .img1").setAttribute("src", dado1);
-document.querySelector(".dado .img2").setAttribute("src", dado2);
+var randomImagenSource = "images/" + randomDadoImagen;
+var imagen1 = document.querySelectorAll("img")[0];
+imagen1.setAttribute("src", randomImagenSource);
+
+//Dado n2
+
+var randomNumber2 = Math.floor(Math.random()*6) + 1;
+
+var randomDadoImagen2 = "dado" + randomNumber2 + ".png"
+
+var randomImagenSource2 = "images/" + randomDadoImagen2;
+
+document.querySelectorAll("img")[1].setAttribute("src", randomImagenSource2);
+
+
 
 if (randomNumber1 === randomNumber2){
     document.querySelector("h1").innerHTML = "Empate"
